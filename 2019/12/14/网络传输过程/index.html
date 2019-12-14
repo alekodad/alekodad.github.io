@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        网络传输过程 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Algorithms are the soul of programs </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>Sun</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#协议三要素"><span class="toc-text">协议三要素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络传输过程"><span class="toc-text">网络传输过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一个问题"><span class="toc-text">一个问题</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> Algorithms are the soul of programs </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        网络传输过程
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-12-14 09:46:46</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#计算机网络" title="计算机网络">计算机网络</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h4 id="协议三要素"><a href="#协议三要素" class="headerlink" title="协议三要素"></a>协议三要素</h4><ul>
+<li><p><strong>语法</strong>，一段内容要符合一定的规则和格式。</p>
+</li>
+<li><p><strong>语义</strong>，一段内容要代表某种意义。</p>
+</li>
+<li><p><strong>顺序</strong>，一段内容要有执行顺序。</p>
+</li>
+</ul>
+<h4 id="网络传输过程"><a href="#网络传输过程" class="headerlink" title="网络传输过程"></a>网络传输过程</h4><ol>
+<li><p>输入url，浏览器通过域名系统DNS(Domain Name System)解析获得目标IP地址，获取到目标IP地址之后就开始打包请求，一般采用HTTP或HTTPS协议，即在应用层，打包完成交给下一层</p>
+</li>
+<li><p>通过socket编程，请求到了传输层，传输层主要有两种协议，一种是无连接的协议<strong>UDP</strong>，一种是面向连接的协议<strong>TCP</strong>。TCP协议里面会有两个端口，一个是浏览器监听的端口，一个是目标服务器监听的端口。操作系统往往通过端口来判断，它得到的包应该给哪个进程。</p>
+</li>
+<li><p>传输层封装完毕之后，浏览器会将包交给操作系统的<strong>网络层</strong>。网络层的协议是IP协议。在IP协议里面会有源IP地址，即浏览器所在机器的IP地址和目标IP地址。操作系统通过IP地址判断，是局域网IP还是外网IP，如果不在不跟本机在同一段IP地址，会把请求交给网关，通过ARP协议获取网关MAC地址，发送到外网的数据需要携带网关MAC地址。（ARP攻击）</p>
+</li>
+<li><p>于是操作系统将IP包交给了下一层，也就是<strong>MAC层</strong>。网卡再将包发出去。由于这个包里面是有MAC地址的，因而它能够到达网关。网关收到包之后，通过<strong>路由协议</strong>（常用的有<strong>OSPF</strong>和<strong>BGP</strong>）,找到目标网关地址。</p>
+<p><img src="/2019/12/14/网络传输过程/01.png" alt="avatar"></p>
+</li>
+</ol>
+<p>找到目标网关之后，通过ARP协议获取目标服务器MAC地址网络包过关后，通过这个MAC地址就能找到目标服务器。目标服务器发现MAC地址对上了，取下MAC头来，发送给操作系统的网络层。发现IP也对上了，就取下IP头。IP头里会写上一层封装的是TCP协议，然后将其交给传输层，即<strong>TCP层</strong>。</p>
+<p>在这一层里，对于收到的每个包，都会有一个回复的ACK包说明收到了。这个回复的包绝非这次请求的结果，而仅仅是TCP层的一个说明，即收到之后的回复。</p>
+<p>如果发送端没有收到回复，发送端的TCP层会重新发送这个包，还是上面的过程，直到有一天收到平安到达的回复。<strong>这个重试绝非你的浏览器重新将下单这个动作重新请求一次</strong>。对于浏览器来讲，就发送了一次下单请求，TCP层不断自己闷头重试。除非TCP这一层出了问题，例如连接断了，才轮到浏览器的应用层重新发送下单请求。</p>
+<p>当网络包平安到达TCP层之后，TCP头中有目标端口号，通过这个端口号，可以找到目标网站的进程正在监听这个端口号。通过RPC框架告诉相关进程，执行成功返回HTTP/HTTPS包，最终展示到用户浏览器上。</p>
+<p><img src="/2019/12/14/网络传输过程/02.png" alt="avatar"></p>
+<h4 id="一个问题"><a href="#一个问题" class="headerlink" title="一个问题"></a>一个问题</h4><p>Q：当网络包到达一个网关的时候，可以通过路由表得到下一个网关的IP地址，直接通过IP地址找就可以了，为什么还要通过本地的MAC地址呢？</p>
+<p>A：IP地址确定位置，MAC地址确定身份。IP是网络层使用的MAC是链路层使用的，IP包最终还是要通过物理链接和MAC地址进行交互的。</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
